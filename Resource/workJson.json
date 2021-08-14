@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "date": 1,
+        "dateOfWeek": "월",
+        "workStatus": "A",
+        "isAnnualLeave": false,
+        "attendanceStatus": {
+            "monthlyLeave": false,
+            "annualLeave": false
+        }
+    },
+    {
+        "id": 2,
+        "date": 2,
+        "dateOfWeek": "화",
+        "workStatus": "A",
+        "isAnnualLeave": false,
+        "attendanceStatus": {
+            "monthlyLeave": false,
+            "annualLeave": false
+        }
+    },
+    {
+        "id": 3,
+        "date": 3,
+        "dateOfWeek": "수",
+        "workStatus": "28",
+        "isAnnualLeave": true,
+        "attendanceStatus": {
+            "monthlyLeave": false,
+            "annualLeave": true
+        }
+    },
+    {
+        "id": 4,
+        "date": 4,
+        "dateOfWeek": "목",
+        "workStatus": "A",
+        "isAnnualLeave": false,
+        "attendanceStatus": {
+            "monthlyLeave": false,
+            "annualLeave": false
+        }
+    }
+]

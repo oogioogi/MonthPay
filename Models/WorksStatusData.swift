@@ -6,16 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct WorkStatusData: Codable, Hashable, Identifiable {
-    var id = UUID()
+    var id: Int
     var date: Int
+    var dateOfWeek: String
     var workStatus: String
+    var isAnnualLeave: Bool
     var attendanceStatus: AttendanceStatus
 }
 
 struct AttendanceStatus: Codable, Hashable {
-    var monthLeace: Bool
+    var monthlyLeave: Bool
     var annualLeave: Bool
 }
 

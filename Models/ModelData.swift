@@ -1,15 +1,15 @@
 //
-//  ModelDatas.swift
+//  ModelData.swift
 //  MonthPay
 //
-//  Created by 이용석 on 2021/08/14.
+//  Created by 이용석 on 2021/08/15.
 //
 
 import Foundation
 import Combine
 
 final class ModelData: ObservableObject {
-    @Published var workStatusDatas: [WorkStatusData] = load("WorkStatus.json")
+    @Published var workStatusDatas: [WorkStatusData] = load("workJson.json")
 }
 
 
@@ -28,7 +28,7 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
     
     do {
-        return try JSONDecoder().decode(T.self, from: data)
+         return try JSONDecoder().decode(T.self, from: data)
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
