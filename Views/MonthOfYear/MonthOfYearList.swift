@@ -30,8 +30,10 @@ struct MonthOfYearList: View {
 }
 
 struct MonthOfYearList_Previews: PreviewProvider {
+    @StateObject static var model = ModelData()
     static var previews: some View {
         MonthOfYearList()
+            .environmentObject(model)
     }
 }
 
