@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            MonthOfYearList()
+            WorkYearList()
                 .tabItem { Label("나의 근무", systemImage: "list.bullet")}
                 .tag(Tap.list)
                 
@@ -30,5 +30,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
     }
 }

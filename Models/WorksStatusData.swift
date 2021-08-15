@@ -15,6 +15,13 @@ struct WorkStatusData: Codable, Hashable, Identifiable {
     var workStatus: String
     var isAnnualLeave: Bool
     var attendanceStatus: AttendanceStatus
+    
+    private var imageName: String
+    
+    var annualImage: Image? {
+        isAnnualLeave ? Image(imageName) : nil
+    }
+    
 }
 
 struct AttendanceStatus: Codable, Hashable {

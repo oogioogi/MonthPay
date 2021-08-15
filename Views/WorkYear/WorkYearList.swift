@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MonthOfYearList: View {
+struct WorkYearList: View {
     
     @EnvironmentObject var modelData: ModelData
     @State private var showAnnual = false
@@ -21,10 +21,21 @@ struct MonthOfYearList: View {
     var body: some View {
         NavigationView {
             List {
+                Toggle(isOn: $showAnnual) {
+                    Text("연차 사용만 표시")
+                }
+                
                 ForEach(workData) { work in
-                    MonthOfYearRow(workStatusData: work)
+                    NavigationLink(destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                        WorkYearRow(workStatusData: work)
+                            .padding([.top, .leading], 5.0)
+                    }
+                    
                 }
             }
+            
+            
+            
         }
     }
 }
@@ -32,8 +43,10 @@ struct MonthOfYearList: View {
 struct MonthOfYearList_Previews: PreviewProvider {
     @StateObject static var model = ModelData()
     static var previews: some View {
-        MonthOfYearList()
-            .environmentObject(model)
+        Group {
+            WorkYearList()
+                .environmentObject(model)
+        }
     }
 }
 
