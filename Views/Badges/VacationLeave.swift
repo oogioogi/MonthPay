@@ -18,7 +18,7 @@ struct VacationLeave: View {
             VStack(spacing: 0.0) {
                 Rectangle()
                     .frame(width: BagesData.width, height: BagesData.height)
-                    .foregroundColor(workStatusData.isAnnualLeave ? .green : .purple)
+                    .foregroundColor(workStatusData.leave ? .green : .purple)
                     .cornerRadius(30)
             }
             

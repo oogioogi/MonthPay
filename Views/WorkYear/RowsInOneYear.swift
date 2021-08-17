@@ -16,7 +16,7 @@ struct RowsInOneYear: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(alignment: .center, spacing: 30) {
                 //MonthBadge(workStatusData: workStatusData)
-                DayIconBadge(workStatusData: workStatusData)
+                MonthIconBadge(workStatusData: workStatusData)
                     .frame(width: 45, height: 45)
                     .scaleEffect(1.0 / 5.0)
                 
@@ -24,10 +24,12 @@ struct RowsInOneYear: View {
                     .frame(width: 45, height: 45)
                     .scaleEffect(1.0 / 5.0)
                 
-                VacationLeave(workStatusData: workStatusData)
-                    .frame(width: 45, height: 45)
-                    .scaleEffect(1.0 / 5.0)
-                
+                if workStatusData.leave {
+                    VacationLeave(workStatusData: workStatusData)
+                        .frame(width: 45, height: 45)
+                        .scaleEffect(1.0 / 5.0)
+                }
+   
             }.padding()
         }
     }

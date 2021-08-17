@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DayIconBadge: View {
+struct MonthIconBadge: View {
     
     var workStatusData: WorkPlanData
     
@@ -16,7 +16,7 @@ struct DayIconBadge: View {
             Image("31")
                 .resizable()
                 .frame(width: 300, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            Text("\(workStatusData.date)")
+            Text("\(workStatusData.month)")
                 .font(.system(size: 140, weight: .bold, design: .rounded))
                 .bold()
                 .offset(x: 0.0, y: 42.0)
@@ -26,6 +26,6 @@ struct DayIconBadge: View {
 
 struct DayIconBadge_Previews: PreviewProvider {
     static var previews: some View {
-        DayIconBadge(workStatusData: ModelData().workPlanDatas[0])
+        MonthIconBadge(workStatusData: ModelData().workPlanDatas[0])
     }
 }

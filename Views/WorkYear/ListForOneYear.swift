@@ -14,7 +14,7 @@ struct ListForOneYear: View {
     
     var workData: [WorkPlanData] {
         return modelData.workPlanDatas.filter { work in
-            (!showAnnual || work.isAnnualLeave)
+            (!showAnnual || work.leave)
         }
     }
     
