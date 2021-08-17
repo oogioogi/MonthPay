@@ -32,11 +32,10 @@ struct MonthOfDayRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             RowsInOneYear(workStatusData: works[0])
-                .previewLayout(.fixed(width: 300, height: 150))
-                .environmentObject(modelData)
             RowsInOneYear(workStatusData: works[1])
-                .previewLayout(.fixed(width: 300, height: 150))
-                .environmentObject(modelData)
+            RowsInOneYear(workStatusData: works[2])
         }
+        .previewLayout(.fixed(width: 300, height: 150))
+        .environmentObject(modelData)
     }
 }
