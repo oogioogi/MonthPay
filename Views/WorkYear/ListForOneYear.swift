@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct WorkYearList: View {
+struct ListForOneYear: View {
     
     @EnvironmentObject var modelData: ModelData
-    @State private var showAnnual = false
+    @State private var showAnnual = false // 연차만 보여줌 토글 스위치
     
-    var workData: [WorkStatusData] {
-        return modelData.workStatusDatas.filter { work in
+    var workData: [WorkPlanData] {
+        return modelData.workPlanDatas.filter { work in
             (!showAnnual || work.isAnnualLeave)
         }
     }
@@ -27,15 +27,15 @@ struct WorkYearList: View {
                 
                 ForEach(workData) { work in
                     NavigationLink(destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
-                        WorkYearRow(workStatusData: work)
-                            .padding([.top, .leading], 5.0)
+                        RowsInOneYear(workStatusData: work)
+                           
                     }
                     
                 }
+                
             }
-            
-            
-            
+            .navigationTitle("2021")
+            //.animation(.easeInOut)
         }
     }
 }
@@ -44,7 +44,7 @@ struct MonthOfYearList_Previews: PreviewProvider {
     @StateObject static var model = ModelData()
     static var previews: some View {
         Group {
-            WorkYearList()
+            ListForOneYear()
                 .environmentObject(model)
         }
     }

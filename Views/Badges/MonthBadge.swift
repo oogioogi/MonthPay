@@ -9,16 +9,16 @@ import SwiftUI
 
 struct MonthBadge: View {
     
-    @State var monthOfYear: String
-    
+    var workStatusData: WorkPlanData
     var body: some View {
         
         ZStack {
-            CalendarFrame()
-            CalendarHook()
-            Text(monthOfYear)
+            CalendarFrame(width: BagesData.width, height: 300.0)
+            CalendarHook(width: 50.0, height: 50.0)
+            Text("\(workStatusData.date)")
                 .font(.system(size: 150))
                 .bold()
+                .foregroundColor(.white)
                 .offset(y: 40.0)
         }
         
@@ -26,15 +26,21 @@ struct MonthBadge: View {
 }
 
 struct CalendarFrame: View {
+    
+    var width: CGFloat
+    var height: CGFloat
+    
     var body: some View {
         VStack(spacing: 0.0) {
             Rectangle()
-                .frame(width: UIScreen.main.bounds.width, height: 100)
+                .frame(width: width, height: height / 3)
                 .foregroundColor(.pink)
+                .cornerRadius(20)
                 
             Rectangle()
-                .frame(width: UIScreen.main.bounds.width, height: 300)
+                .frame(width: width, height: height)
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .cornerRadius(20)
         }
     }
 
@@ -42,44 +48,47 @@ struct CalendarFrame: View {
 
 struct CalendarHook: View {
     
+    var width: CGFloat
+    var height: CGFloat
+    
     var body: some View {
         HStack{
             Circle()
-                .frame(width: 50.0, height: 50.0)
+                .frame(width: width, height: height)
                 .foregroundColor(.white)
-                .padding(.leading, 50)
+                .padding(.leading, 70)
             
             Spacer()
             
             Circle()
-                .frame(width: 50.0, height: 50.0)
+                .frame(width: width, height: height)
                 .foregroundColor(.white)
             
             Spacer()
             
             Circle()
-                .frame(width: 50.0, height: 50.0)
+                .frame(width: width, height: height)
                 .foregroundColor(.white)
-                .padding(.trailing, 50)
+                .padding(.trailing, 70)
         }.offset(x: 0, y: -150)
         
         HStack{
             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                .frame(width: 40.0, height: 130.0)
+                .frame(width: width - 10.0, height: height * 2.5)
                 .foregroundColor(.gray)
-                .padding(.leading, 55)
+                .padding(.leading, 75)
             Spacer()
             
             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                .frame(width: 40.0, height: 130.0)
+                .frame(width: width - 10.0, height: height * 2.5)
                 .foregroundColor(.gray)
             
             Spacer()
             
             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                .frame(width: 40.0, height: 130.0)
+                .frame(width: width - 10.0, height: height * 2.5)
                 .foregroundColor(.gray)
-                .padding(.trailing, 55)
+                .padding(.trailing, 75)
         }.offset(x: 0, y: -200)
     }
 }
@@ -87,6 +96,6 @@ struct CalendarHook: View {
 
 struct Badge_Previews: PreviewProvider {
     static var previews: some View {
-        MonthBadge(monthOfYear: "1")
+        MonthBadge(workStatusData: ModelData().workPlanDatas[0])
     }
 }

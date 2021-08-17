@@ -18,8 +18,8 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            WorkYearList()
-                .tabItem { Label("나의 근무", systemImage: "list.bullet")}
+            ListForOneYear()
+                .tabItem { Label("One Year", systemImage: "list.bullet")}
                 .tag(Tap.list)
                 
         }

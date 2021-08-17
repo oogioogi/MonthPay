@@ -9,9 +9,9 @@ import Foundation
 import Combine
 
 final class ModelData: ObservableObject {
-    @Published var workStatusDatas: [WorkStatusData] = load("workJson.json")
+    @Published var workPlanDatas: [WorkPlanData] = load("workJson.json")
+    @Published var contentData = ContentData.contentData
 }
-
 
 func load<T: Decodable>(_ filename: String) -> T {
     
