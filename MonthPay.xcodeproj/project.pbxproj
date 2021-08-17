@@ -112,7 +112,7 @@
 			children = (
 				862BF89726C680C50050F7DE /* ContentView.swift */,
 				862D8CC026C91F7300AC6774 /* Badges */,
-				86B5DE1326C80171003D9A52 /* WorkYear */,
+				86B5DE1326C80171003D9A52 /* ListTap */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,13 +125,13 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		86B5DE1326C80171003D9A52 /* WorkYear */ = {
+		86B5DE1326C80171003D9A52 /* ListTap */ = {
 			isa = PBXGroup;
 			children = (
 				86B5DE1426C80274003D9A52 /* ListForOneYear.swift */,
 				8630E9E526C7D8E700D239AF /* RowsInOneYear.swift */,
 			);
-			path = WorkYear;
+			path = ListTap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
