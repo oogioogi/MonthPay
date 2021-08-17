@@ -16,6 +16,7 @@
 		862E6E7C26CB2EC500B94922 /* CircleBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862E6E7B26CB2EC500B94922 /* CircleBadge.swift */; };
 		862E6E7F26CB337100B94922 /* ContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862E6E7E26CB337100B94922 /* ContentData.swift */; };
 		8630E9E626C7D8E700D239AF /* RowsInOneYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8630E9E526C7D8E700D239AF /* RowsInOneYear.swift */; };
+		8635D57626CB83C600B655AF /* DayIconBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635D57526CB83C600B655AF /* DayIconBadge.swift */; };
 		8635E1A026C9E28A004DBFF2 /* BagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635E19F26C9E28A004DBFF2 /* BagesData.swift */; };
 		8635E1A626CA062F004DBFF2 /* VacationLeave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635E1A526CA062F004DBFF2 /* VacationLeave.swift */; };
 		865B6A5326C8189500BDDA3F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B6A5226C8189500BDDA3F /* ModelData.swift */; };
@@ -36,6 +37,7 @@
 		862E6E7B26CB2EC500B94922 /* CircleBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBadge.swift; sourceTree = "<group>"; };
 		862E6E7E26CB337100B94922 /* ContentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentData.swift; sourceTree = "<group>"; };
 		8630E9E526C7D8E700D239AF /* RowsInOneYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsInOneYear.swift; sourceTree = "<group>"; };
+		8635D57526CB83C600B655AF /* DayIconBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayIconBadge.swift; sourceTree = "<group>"; };
 		8635E19F26C9E28A004DBFF2 /* BagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagesData.swift; sourceTree = "<group>"; };
 		8635E1A526CA062F004DBFF2 /* VacationLeave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationLeave.swift; sourceTree = "<group>"; };
 		865B6A5226C8189500BDDA3F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				8635E1A526CA062F004DBFF2 /* VacationLeave.swift */,
 				862D8CC626C920C500AC6774 /* MonthBadge.swift */,
 				862E6E7B26CB2EC500B94922 /* CircleBadge.swift */,
+				8635D57526CB83C600B655AF /* DayIconBadge.swift */,
 			);
 			path = Badges;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				862D8CC726C920C500AC6774 /* MonthBadge.swift in Sources */,
+				8635D57626CB83C600B655AF /* DayIconBadge.swift in Sources */,
 				862D8CD026C9411200AC6774 /* BasicDuty.swift in Sources */,
 				8630E9E626C7D8E700D239AF /* RowsInOneYear.swift in Sources */,
 				86B5DE0E26C7F873003D9A52 /* WorkPlanData.swift in Sources */,

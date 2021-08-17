@@ -24,15 +24,13 @@ struct ListForOneYear: View {
                 Toggle(isOn: $showAnnual) {
                     Text("연차 사용만 표시")
                 }
-                
+    
                 ForEach(workData) { work in
                     NavigationLink(destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
                         RowsInOneYear(workStatusData: work)
-                           
+                        
                     }
-                    
                 }
-                
             }
             .navigationTitle("2021")
             //.animation(.easeInOut)

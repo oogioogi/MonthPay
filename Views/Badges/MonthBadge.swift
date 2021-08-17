@@ -10,6 +10,7 @@ import SwiftUI
 struct MonthBadge: View {
     
     var workStatusData: WorkPlanData
+    
     var body: some View {
         
         ZStack {

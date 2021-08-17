@@ -12,17 +12,24 @@ struct RowsInOneYear: View {
     var workStatusData: WorkPlanData
     
     var body: some View {
-        HStack(alignment: .center, spacing: 30) {
-            MonthBadge(workStatusData: workStatusData)
-                .frame(width: 45, height: 45)
-                .scaleEffect(1.0 / 7.0)
-            BasicDuty(workStatusData: workStatusData)
-                .frame(width: 45, height: 45)
-                .scaleEffect(1.0 / 5.0)
-            VacationLeave(workStatusData: workStatusData)
-                .frame(width: 45, height: 45)
-                .scaleEffect(1.0 / 5.0)
-        }.padding()
+        
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(alignment: .center, spacing: 30) {
+                //MonthBadge(workStatusData: workStatusData)
+                DayIconBadge(workStatusData: workStatusData)
+                    .frame(width: 45, height: 45)
+                    .scaleEffect(1.0 / 5.0)
+                
+                BasicDuty(workStatusData: workStatusData)
+                    .frame(width: 45, height: 45)
+                    .scaleEffect(1.0 / 5.0)
+                
+                VacationLeave(workStatusData: workStatusData)
+                    .frame(width: 45, height: 45)
+                    .scaleEffect(1.0 / 5.0)
+                
+            }.padding()
+        }
     }
 }
 
