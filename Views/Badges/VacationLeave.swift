@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VacationLeave: View {
     
-    var workStatusData: WorkPlanData
+    var workData: WorkData
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
@@ -18,7 +18,7 @@ struct VacationLeave: View {
             VStack(spacing: 0.0) {
                 Rectangle()
                     .frame(width: BagesData.width, height: BagesData.height)
-                    .foregroundColor(workStatusData.leave ? .green : .purple)
+                    .foregroundColor(workData.leave ? .green : .purple)
                     .cornerRadius(30)
             }
             
@@ -26,7 +26,7 @@ struct VacationLeave: View {
                 Image("annual")
                     .resizable()
                     .frame(width: 180, height: 180, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                Text(workStatusData.attendanceStatus.annualLeave ? "연차" : "월차")
+                Text(workData.vacationLeave.annualLeave ? "연차" : "월차")
                     .font(.system(size: 90, weight: .heavy, design: .rounded))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
@@ -43,10 +43,10 @@ struct VacationLeave: View {
 }
 
 struct VacationLeave_Previews: PreviewProvider {
-    static var works = ModelData().workPlanDatas
+    static var works = ModelData().workDatas
     static let modelData = ModelData()
     static var previews: some View {
-        VacationLeave(workStatusData: works[0])
+        VacationLeave(workData: works[0])
             .environmentObject(modelData)
     }
 }

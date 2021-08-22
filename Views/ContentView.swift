@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var selection: Tap = .list
+    @State private var selection: Tap = .feature
     
     enum Tap {
         case list
@@ -17,12 +17,20 @@ struct ContentView: View {
     }
     
     var body: some View {
+
         TabView(selection: $selection) {
             ListForOneYear()
-                .tabItem { Label("One Year", systemImage: "list.bullet")}
+                .tabItem { Label("Monath List", systemImage: "list.bullet")}
                 .tag(Tap.list)
+               
+
+            CategoryHome()
+                .tabItem { Label("Feature List", systemImage: "bookmark.square")}
+                .tag(Tap.feature)
+            
                 
         }
+        
     }
 }
 

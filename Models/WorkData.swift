@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct WorkPlanData: Codable, Hashable, Identifiable {
+struct WorkData: Codable, Hashable, Identifiable {
     var id: Int
     var month: Int
     var day: Int
@@ -16,7 +16,7 @@ struct WorkPlanData: Codable, Hashable, Identifiable {
     var overTime: Int
     var leave: Bool
     var duty: Duty
-    var attendanceStatus: AttendanceStatus
+    var vacationLeave: AttendanceStatus
     
     private var imageName: String
 
@@ -34,6 +34,7 @@ struct AttendanceStatus: Codable, Hashable {
 struct Duty: Codable, Hashable {
     var basicDuty: Bool
     var holydayDuty: Bool
+    var nightDuty: Bool
 }
 
 /*

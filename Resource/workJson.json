@@ -10,9 +10,10 @@
             "basicDuty" : true,
             "holydayDuty": false
         },
-        "attendanceStatus": {
+        "vacationLeave": {
             "monthlyLeave": false,
-            "annualLeave": true
+            "annualLeave": true,
+            "nightDuty": false
         },
         "imageName": "기본시간"
     },
@@ -27,9 +28,10 @@
             "basicDuty" : false,
             "holydayDuty": true
         },
-        "attendanceStatus": {
+        "vacationLeave": {
             "monthlyLeave": true,
-            "annualLeave": false
+            "annualLeave": false,
+            "nightDuty": false
         },
         "imageName": "병원연차"
     },
@@ -42,9 +44,10 @@
         "leave": false,
         "duty": {
             "basicDuty" : false,
-            "holydayDuty": true
+            "holydayDuty": true,
+            "nightDuty": false
         },
-        "attendanceStatus": {
+        "vacationLeave": {
             "monthlyLeave": false,
             "annualLeave": false
         },

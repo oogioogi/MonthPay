@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BasicDuty: View {
     
-    var workStatusData: WorkPlanData
+    var workData: WorkData
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
@@ -18,7 +18,7 @@ struct BasicDuty: View {
             VStack(spacing: 0.0) {
                 Rectangle()
                     .frame(width: BagesData.width, height: BagesData.height)
-                    .foregroundColor(workStatusData.duty.basicDuty ? .green : .orange)
+                    .foregroundColor(workData.duty.basicDuty ? .green : .orange)
                     .cornerRadius(30)
             }
             
@@ -26,10 +26,10 @@ struct BasicDuty: View {
                 Image("8h")
                     .resizable()
                     .frame(width: 180, height: 180, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                Text("+" + "\(workStatusData.overTime)" + "h")
+                Text("+" + "\(workData.overTime)" + "h")
                     .font(.system(size: 90, weight: .heavy, design: .rounded))
                     .multilineTextAlignment(.center)
-                    .foregroundColor(workStatusData.overTime > 0 ? .pink : .white)
+                    .foregroundColor(workData.overTime > 0 ? .pink : .white)
                     
             }
             CircleBadge(count: modelData.contentData.basicDutyCount)
@@ -45,10 +45,10 @@ struct BasicDuty: View {
 
 
 struct BasicDuty_Previews: PreviewProvider {
-    static var works = ModelData().workPlanDatas
+    static var works = ModelData().workDatas
     static let modelData = ModelData()
     static var previews: some View {
-        BasicDuty(workStatusData: works[0])
+        BasicDuty(workData: works[0])
             .environmentObject(modelData)
     }
 }

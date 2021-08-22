@@ -12,8 +12,8 @@ struct ListForOneYear: View {
     @EnvironmentObject var modelData: ModelData
     @State private var showAnnual = false // 연차만 보여줌 토글 스위치
     
-    var workData: [WorkPlanData] {
-        return modelData.workPlanDatas.filter { work in
+    var workData: [WorkData] {
+        return modelData.workDatas.filter { work in
             (!showAnnual || work.leave)
         }
     }
@@ -27,19 +27,20 @@ struct ListForOneYear: View {
     
                 ForEach(workData) { work in
                     NavigationLink(destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
-                        RowsInOneYear(workStatusData: work)
+                        RowsInOneYear(workData: work)
                         
                     }
                 }
             }
             .navigationTitle("2021")
-            //.animation(.easeInOut)
         }
     }
 }
 
 struct MonthOfYearList_Previews: PreviewProvider {
+    
     @StateObject static var model = ModelData()
+    
     static var previews: some View {
         Group {
             ListForOneYear()
