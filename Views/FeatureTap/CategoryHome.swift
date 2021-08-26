@@ -10,9 +10,28 @@ import SwiftUI
 struct CategoryHome: View {
     
     @EnvironmentObject var modelData: ModelData
+    @State private var selectedFlavor = Flavor.week
+    
+    enum Flavor {
+        case day
+        case week
+        case month
+        case year
+    }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            Picker(selection: $selectedFlavor, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/, content: {
+                Text("Day").tag(Flavor.day)
+                Text("Week").tag(Flavor.week)
+                Text("Month").tag(Flavor.month)
+                Text("Year").tag(Flavor.year)
+            })
+            .pickerStyle(SegmentedPickerStyle())
+            .accessibility(label: Text("aaa"))
+            Spacer()
+        }
     }
 }
 

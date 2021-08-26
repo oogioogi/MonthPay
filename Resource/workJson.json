@@ -8,12 +8,12 @@
         "leave": true,
         "duty": {
             "basicDuty" : true,
-            "holydayDuty": false
+            "holydayDuty": false,
+            "nightDuty": false
         },
         "vacationLeave": {
             "monthlyLeave": false,
-            "annualLeave": true,
-            "nightDuty": false
+            "annualLeave": true
         },
         "imageName": "기본시간"
     },
@@ -26,12 +26,12 @@
         "leave": false,
         "duty": {
             "basicDuty" : false,
-            "holydayDuty": true
+            "holydayDuty": true,
+            "nightDuty": false
         },
         "vacationLeave": {
             "monthlyLeave": true,
-            "annualLeave": false,
-            "nightDuty": false
+            "annualLeave": false
         },
         "imageName": "병원연차"
     },
