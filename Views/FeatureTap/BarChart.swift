@@ -22,7 +22,7 @@ struct BarChart: View {
             Text(title)
                 .bold()
                 .font(.largeTitle)
-            Text("Current value: (currentValue)")
+            Text("Current value: \(currentValue)")
                 .font(.headline)
             
             GeometryReader { geometry in
