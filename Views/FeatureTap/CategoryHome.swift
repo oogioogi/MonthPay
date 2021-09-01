@@ -7,18 +7,20 @@
 
 import SwiftUI
 
-enum Items: Identifiable {
-    case overTime
+enum Items: Int, Identifiable, CaseIterable, Hashable {
+    case overTime = 0
     case basicDuty
 //    case holydayDuty
 //    case nightDuty
 //    case monthlyLeave
 //    case annualLeave
-    
+    var name: String {
+        return "\(self)".capitalized
+    }
     var id: Items { self }
 }
 
-enum Months: Identifiable {
+enum Months: Identifiable, CaseIterable, Hashable {
     case Jan
     case Feb
     case Mar
@@ -34,15 +36,17 @@ enum Months: Identifiable {
     
     var id: Months { self }
     
+    var shortName: String {
+        return String("\(self)".prefix(3)).capitalized
+    }
 }
-
 
 struct CategoryHome: View {
     
     @EnvironmentObject var modelData: ModelData
-    @State private var selectedItems = Items.basicDuty
+    @State private var selectedItems = 0
     
-    @State var data =
+    @State var data:[(selectorItems: Items, source: [(month: Months, sourceData: Int)])] =
         [
             (
                 Items.overTime,
@@ -83,17 +87,21 @@ struct CategoryHome: View {
     var body: some View {
         
         VStack {
-            Picker(selection: $selectedItems, label: Text(""), content: {
-                Text("초과근무").tag(Items.overTime)
-                Text("기본근무").tag(Items.basicDuty)
-//                Text("휴일근무").tag(Items.holydayDuty)
-//                Text("야간근무").tag(Items.nightDuty)
-//                Text("월차").tag(Items.monthlyLeave)
-//                Text("연차").tag(Items.annualLeave)
+            Picker(selection: $selectedItems.animation(), label: Text(""), content: {
+                
+                ForEach(Items.allCases) { item in
+                    Text(item.name).tag(item.rawValue)
+                }
+
             })
             .pickerStyle(SegmentedPickerStyle())
-            Spacer()
-            BarView(value: 40, label: "월")
+            
+            HStack(spacing: 2) {
+                ForEach(0..<self.data[selectedItems].source.count, id: \.self) { i in
+                    BarView(value: self.data[selectedItems].source[i].sourceData, label: self.data[selectedItems].source[i].month.shortName)
+                }
+            }
+            
         }
     }
 }
