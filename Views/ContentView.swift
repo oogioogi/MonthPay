@@ -25,7 +25,7 @@ struct ContentView: View {
                
 
             CategoryHome()
-                .tabItem { Label("Feature List", systemImage: "bookmark.square")}
+                .tabItem { Label("Feature List", systemImage: "text.book.closed")}
                 .tag(Tap.feature)
             
                 
