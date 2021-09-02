@@ -51,35 +51,35 @@ struct CategoryHome: View {
             (
                 Items.overTime,
                 [
-                    (Months.Jan, 100),
-                    (Months.Feb, 110),
-                    (Months.Mar, 120),
-                    (Months.Apr, 130),
-                    (Months.May, 140),
-                    (Months.Jun, 150),
-                    (Months.Jul, 160),
-                    (Months.Aug, 170),
-                    (Months.Sep, 90),
-                    (Months.Oct, 80),
-                    (Months.Nov, 70),
-                    (Months.Dec, 60),
+                    (Months.Jan, 4),
+                    (Months.Feb, 10),
+                    (Months.Mar, 20),
+                    (Months.Apr, 30),
+                    (Months.May, 0),
+                    (Months.Jun, 2),
+                    (Months.Jul, 17),
+                    (Months.Aug, 16),
+                    (Months.Sep, 20),
+                    (Months.Oct, 10),
+                    (Months.Nov, 11),
+                    (Months.Dec, 12),
                 ]
             ),
             (
                 Items.basicDuty,
                 [
-                    (Months.Jan, 100),
-                    (Months.Feb, 100),
-                    (Months.Mar, 100),
-                    (Months.Apr, 100),
-                    (Months.May, 90),
-                    (Months.Jun, 90),
-                    (Months.Jul, 90),
-                    (Months.Aug, 90),
-                    (Months.Sep, 90),
-                    (Months.Oct, 80),
-                    (Months.Nov, 80),
-                    (Months.Dec, 80),
+                    (Months.Jan, 12),
+                    (Months.Feb, 13),
+                    (Months.Mar, 14),
+                    (Months.Apr, 15),
+                    (Months.May, 16),
+                    (Months.Jun, 17),
+                    (Months.Jul, 18),
+                    (Months.Aug, 19),
+                    (Months.Sep, 20),
+                    (Months.Oct, 9),
+                    (Months.Nov, 8),
+                    (Months.Dec, 7),
                 ]
             )
         ]
@@ -98,10 +98,11 @@ struct CategoryHome: View {
             
             HStack(spacing: 2) {
                 ForEach(0..<self.data[selectedItems].source.count, id: \.self) { i in
-                    BarView(value: self.data[selectedItems].source[i].sourceData, label: self.data[selectedItems].source[i].month.shortName)
+                    BarView(value: self.data[selectedItems].source[i].sourceData,
+                            label: self.data[selectedItems].source[i].month.shortName)
                 }
             }
-            
+            Spacer()
         }
     }
 }
