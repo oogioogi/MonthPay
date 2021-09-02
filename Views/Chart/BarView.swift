@@ -17,8 +17,12 @@ struct BarView: View {
             ZStack(alignment: .bottom) {
                 Capsule().frame(width: 30, height: 200)
                     .foregroundColor(Color(#colorLiteral(red: 0.5563449264, green: 0.9793745875, blue: 0.0003482861503, alpha: 1)))
-                Capsule().frame(width: 30, height: CGFloat(value))
-                    .foregroundColor(Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
+                ZStack {
+                    Capsule().frame(width: 30, height: CGFloat(value))
+                        .foregroundColor(Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
+                    CircleValue(value: value)
+                        .offset(y: CGFloat(-value + value/2))
+                }
             }
             Text(label)
                 .padding(.top, 8)

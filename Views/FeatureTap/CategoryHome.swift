@@ -10,10 +10,10 @@ import SwiftUI
 enum Items: Int, Identifiable, CaseIterable, Hashable {
     case overTime = 0
     case basicDuty
-//    case holydayDuty
-//    case nightDuty
-//    case monthlyLeave
-//    case annualLeave
+    case holydayDuty
+    case nightDuty
+    case monthlyLeave
+    case annualLeave
     var name: String {
         return "\(self)".capitalized
     }
