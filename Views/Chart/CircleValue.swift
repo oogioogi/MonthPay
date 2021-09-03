@@ -9,12 +9,14 @@ import SwiftUI
 
 struct CircleValue: View {
     
+    var width: CGFloat
+    var height: CGFloat
     var value: Int
     
     var body: some View {
         ZStack {
             Circle()
-                .frame(width: 25, height: 25)
+                .frame(width: width, height: height)
                 .foregroundColor(.blue).opacity(1.0)
                 
             Text("\(value)")
@@ -26,6 +28,6 @@ struct CircleValue: View {
 
 struct CircleValue_Previews: PreviewProvider {
     static var previews: some View {
-        CircleValue(value: 100)
+        CircleValue(width: 25, height: 25, value: 100)
     }
 }
