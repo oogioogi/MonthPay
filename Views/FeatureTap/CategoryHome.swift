@@ -7,17 +7,16 @@
 
 import SwiftUI
 
-
-
 struct CategoryHome: View {
     
     @EnvironmentObject var modelData: ModelData
-    @State private var selectedItems = 0
+    @EnvironmentObject var workDays: WorkDays
+    @State private var selectedItems = 1
     
     var values: [Double] {
         var tempValues: [Double] = []
         
-        for(_, value) in modelData.data[selectedItems].source.enumerated() {
+        for(_, value) in workDays.data[selectedItems].source.enumerated() {
             tempValues.append(value.sourceData)
         }
         return tempValues
@@ -30,25 +29,26 @@ struct CategoryHome: View {
         GeometryReader { metry in
             VStack {
                 Picker(selection: $selectedItems.animation(), label: Text(""), content: {
-                    ForEach(Items.allCases) { item in
+                    ForEach(Segments.allCases) { item in
                         Text(item.name).tag(item.rawValue)
                     }
                 })
                 .pickerStyle(SegmentedPickerStyle())
 
                 HStack {
-                    ForEach(0..<modelData.data[selectedItems].source.count, id: \.self) { i in
+                    ForEach(0..<workDays.data[selectedItems].source.count, id: \.self) { i in
                         BarView(
                             width: metry.size.width/18,
                             height: 200,
-                            value: modelData.data[selectedItems].source[i].sourceData,
-                            label: modelData.data[selectedItems].source[i].month.shortName
+                            value: workDays.data[selectedItems].source[i].sourceData,
+                            label: workDays.data[selectedItems].source[i].month.shortName
                         )
                     }
                 }
                 PieView(values: values, colors: colors)
                     .padding()
                     .animation(.easeInOut)
+                Text("\(values.count)")
             }
         }
     }
@@ -57,9 +57,11 @@ struct CategoryHome: View {
 struct FeatureForOneYear_Previews: PreviewProvider {
     
     @StateObject static var model = ModelData()
+    @StateObject static var work = WorkDays()
     
     static var previews: some View {
         CategoryHome()
             .environmentObject(model)
+            .environmentObject(work)
     }
 }

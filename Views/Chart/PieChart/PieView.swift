@@ -49,6 +49,10 @@ struct PieView: View {
                 .frame(width: geometry.size.width, height: geometry.size.width)
                 //.background(self.backgroundColor)
                 .foregroundColor(.white)
+                
+                Circle()
+                    .fill(Color.white)
+                    .frame(width: geometry.size.width * 0.5, height: geometry.size.width * 0.5)
             }
         }
     }

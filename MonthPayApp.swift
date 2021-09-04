@@ -11,11 +11,13 @@ import SwiftUI
 struct MonthPayApp: App {
     
     @StateObject var modelData = ModelData()
+    @StateObject var workDays = WorkDays()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(modelData)
+                .environmentObject(workDays)
         }
     }
 }
