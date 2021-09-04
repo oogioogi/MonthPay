@@ -53,7 +53,7 @@ final class ModelData: ObservableObject {
     
     
     
-    var data:[(selectorItems: Items, source: [(month: Months, sourceData: Int)])] =
+    var data:[(selectorItems: Items, source: [(month: Months, sourceData: Double)])] =
         [
             (
                 Items.overTime,

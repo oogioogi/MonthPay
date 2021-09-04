@@ -14,6 +14,18 @@ struct CategoryHome: View {
     @EnvironmentObject var modelData: ModelData
     @State private var selectedItems = 0
     
+    var values: [Double] {
+        var tempValues: [Double] = []
+        
+        for(_, value) in modelData.data[selectedItems].source.enumerated() {
+            tempValues.append(value.sourceData)
+        }
+        return tempValues
+    }
+    
+    var colors: [Color] = [ Color.blue, Color.gray, Color.green, Color.pink, Color.purple, Color.yellow,
+                            Color.orange, Color.red, Color.black, Color.red, Color.blue, Color.gray ]
+    
     var body: some View {
         GeometryReader { metry in
             VStack {
@@ -34,6 +46,9 @@ struct CategoryHome: View {
                         )
                     }
                 }
+                PieView(values: values, colors: colors)
+                    .padding()
+                    .animation(.easeInOut)
             }
         }
     }

@@ -11,7 +11,7 @@ struct CircleValue: View {
     
     var width: CGFloat
     var height: CGFloat
-    var value: Int
+    var value: Double
     
     var body: some View {
         ZStack {
@@ -19,7 +19,7 @@ struct CircleValue: View {
                 .frame(width: width, height: height)
                 .foregroundColor(.blue).opacity(1.0)
                 
-            Text("\(value)")
+            Text("\(Int(value))")
                 .foregroundColor(.white)
                 .font(.system(size: 10, weight: .heavy, design: .rounded))
         }

@@ -17,7 +17,7 @@ struct BarView: View {
     
     var width: CGFloat
     var height: CGFloat
-    var value: Int
+    var value: Double
     var label: String
     
     var body: some View {
