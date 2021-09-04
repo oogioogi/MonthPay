@@ -25,6 +25,8 @@
 		863B7AE526E060C100588A47 /* CircleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863B7AE426E060C100588A47 /* CircleValue.swift */; };
 		8644C94226D3CA1F0027BE94 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644C94126D3CA1F0027BE94 /* CategoryItem.swift */; };
 		8646632126E3A03700DC1ACD /* NumberOfWorkingDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646632026E3A03700DC1ACD /* NumberOfWorkingDays.swift */; };
+		8646632526E3B8A000DC1ACD /* DateFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646632426E3B8A000DC1ACD /* DateFieldCell.swift */; };
+		8646632926E3BF8400DC1ACD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646632826E3BF8400DC1ACD /* CalendarView.swift */; };
 		865B6A5326C8189500BDDA3F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B6A5226C8189500BDDA3F /* ModelData.swift */; };
 		865B6A5726C81A5600BDDA3F /* workJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 865B6A5626C81A5600BDDA3F /* workJson.json */; };
 		86B5DE0E26C7F873003D9A52 /* WorkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5DE0D26C7F873003D9A52 /* WorkData.swift */; };
@@ -52,6 +54,8 @@
 		863B7AE426E060C100588A47 /* CircleValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleValue.swift; sourceTree = "<group>"; };
 		8644C94126D3CA1F0027BE94 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		8646632026E3A03700DC1ACD /* NumberOfWorkingDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfWorkingDays.swift; sourceTree = "<group>"; };
+		8646632426E3B8A000DC1ACD /* DateFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFieldCell.swift; sourceTree = "<group>"; };
+		8646632826E3BF8400DC1ACD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		865B6A5226C8189500BDDA3F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		865B6A5626C81A5600BDDA3F /* workJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = workJson.json; sourceTree = "<group>"; };
 		86B5DE0D26C7F873003D9A52 /* WorkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkData.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				862BF89726C680C50050F7DE /* ContentView.swift */,
+				8646632326E3B74D00DC1ACD /* Calendar */,
 				8644C94426D3D94E0027BE94 /* Chart */,
 				8635D57C26CBB94300B655AF /* FeatureTap */,
 				862D8CC026C91F7300AC6774 /* Badges */,
@@ -168,6 +173,15 @@
 				86355EF326E2EE8000720DDF /* BarChart */,
 			);
 			path = Chart;
+			sourceTree = "<group>";
+		};
+		8646632326E3B74D00DC1ACD /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				8646632426E3B8A000DC1ACD /* DateFieldCell.swift */,
+				8646632826E3BF8400DC1ACD /* CalendarView.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		86B5DE0726C7F397003D9A52 /* Resource */ = {
@@ -265,6 +279,8 @@
 				86355EF726E2EECD00720DDF /* PieView.swift in Sources */,
 				86B5DE1526C80274003D9A52 /* ListForOneYear.swift in Sources */,
 				862E6E7F26CB337100B94922 /* ContentData.swift in Sources */,
+				8646632926E3BF8400DC1ACD /* CalendarView.swift in Sources */,
+				8646632526E3B8A000DC1ACD /* DateFieldCell.swift in Sources */,
 				8646632126E3A03700DC1ACD /* NumberOfWorkingDays.swift in Sources */,
 				862BF89826C680C50050F7DE /* ContentView.swift in Sources */,
 				8635E1A626CA062F004DBFF2 /* VacationLeave.swift in Sources */,

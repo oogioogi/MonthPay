@@ -72,7 +72,7 @@ final class WorkDays: ObservableObject {
                     (Monthly.Apr, 9),
                     (Monthly.May, 12),
                     (Monthly.Jun, 13),
-                    (Monthly.Jul, 15),
+                    (Monthly.Jul, 14),
                     (Monthly.Aug, 14),
                     (Monthly.Sep, 13),
                     (Monthly.Oct, 13),
