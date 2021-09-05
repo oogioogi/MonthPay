@@ -15,6 +15,7 @@ struct DateFieldCell: ViewModifier {
     }
     var overTime: Int
     var color: Color
+    @State var isOnTap: Bool = false
     
     func body(content: Content) -> some View {
         ZStack(alignment: .top) {
@@ -32,7 +33,12 @@ struct DateFieldCell: ViewModifier {
                 .foregroundColor(overTime > 0 ? Color.red : Color.gray)
                 
         }
-
+        .onTapGesture {
+            isOnTap.toggle()
+        }
+        .alert(isPresented: $isOnTap) {
+            Alert(title: Text("content"), message: Text("\(overTime)"), dismissButton: .cancel())
+        }
     }
     
 }

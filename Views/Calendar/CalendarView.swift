@@ -27,15 +27,13 @@ struct CalendarView: View {
                 }
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
                     ForEach(1..<36, id: \.self) { i in
-                        Text("\(i)").dateFieldCell(overTime: 1, color: .blue)
+                        Text("\(i)").dateFieldCell(overTime: i, color: .blue)
                     }
                 }
             }
             .padding()
             Spacer()
         }
-       
-        
     }
 }
 
