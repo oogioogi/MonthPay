@@ -7,32 +7,38 @@
 
 import SwiftUI
 
-struct DateFieldCell: View {
-    var body: some View {
-        
-        GeometryReader { geometry in
-            ZStack {
-                RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/, style: .continuous)
-                    .frame(width: geometry.size.width, height: geometry.size.width)
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    
-                Text("31")
-                    .font(.system(size: geometry.size.width * 0.4, weight: .bold, design: .rounded))
-                    .multilineTextAlignment(.center)
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-                    .frame(width: geometry.size.width * 0.3, height: geometry.size.width * 0.3)
-                    .offset(x: geometry.size.width * 0.3, y: -geometry.size.width * 0.3)
-                    
-            }
-        }
-        
-        
+struct DateFieldCell: ViewModifier {
+
+    var width: CGFloat = UIScreen.main.bounds.width / 8
+    var fontSize: CGFloat {
+        self.width * 0.6
     }
+    var overTime: Int
+    var color: Color
+    
+    func body(content: Content) -> some View {
+        ZStack(alignment: .top) {
+            Rectangle()
+                .stroke(lineWidth: 1.0)
+                .frame(width: self.width, height: self.width * 1.5)
+                
+            content
+                .font(.system(size: fontSize))
+                .foregroundColor(color)
+                .foregroundColor(.black)
+            
+            Text(overTime <= 0 ? "" : "\(overTime)")
+                .offset(x: 10, y: 40)
+                .foregroundColor(overTime > 0 ? Color.red : Color.gray)
+                
+        }
+
+    }
+    
 }
 
-struct DateFieldCell_Previews: PreviewProvider {
-    static var previews: some View {
-        DateFieldCell()
+extension View {
+    func dateFieldCell(overTime: Int, color: Color) -> some View {
+        modifier(DateFieldCell(overTime: overTime, color:color))
     }
 }
