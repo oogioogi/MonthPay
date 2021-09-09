@@ -11,11 +11,7 @@ import Combine
 final class ModelData: ObservableObject {
     @Published var workDatas: [WorkData] = load("workJson.json")
     @Published var contentData = ContentData.contentData
-//    var sss: [String] = [
-//        OverTime.day,
-//
-//
-//    ]
+
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

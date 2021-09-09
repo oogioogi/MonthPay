@@ -7,35 +7,40 @@
 
 import SwiftUI
 
-var rows: some View {
-    Text("").dateFieldCell(overTime: 0, color: Color.blue)
-}
-var cellArray: [DateFieldCell] = []
-
 struct CalendarView: View {
-    var weekArrays = Calendars()
+    
+    @StateObject var calendars = Calendars()
+    //var calendars: Calendars = Calendars()
+
     var dayIndex: Int {
-        weekArrays.firstComponent.weekday!
+        calendars.valuesComponent.weekday!
     }
     var startIndex: Int {
-        weekArrays.firstComponent.day!
+        calendars.firstComponent.day!
     }
     var endIndex: Int {
-        weekArrays.secondComponent.day!
+        calendars.secondComponent.day!
     }
-    
-//    var dayOfMonth: Int {
-//        
-//    }
     
     var body: some View {
         VStack {
-            Text("\(weekArrays.calendar.eraSymbols[0])")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            HStack {
+                Button("<") {
+                    calendars.sub()
+                }
+                Text("\(calendars.currentYear).\(calendars.currentMonth)")
+                    .padding(.horizontal)
+                Button(">") {
+                    calendars.add()
+                }
+            }
+            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            .padding(.horizontal)
+            
             VStack{
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
-                    ForEach(0..<weekArrays.weekArray.count, id: \.self) { i in
-                        Text(weekArrays.weekArray[i]).headerFieldCell(color: i == 0 ? .red : .black)
+                    ForEach(0..<calendars.weekArray.count, id: \.self) { i in
+                        Text(calendars.weekArray[i]).headerFieldCell(color: i == 0 ? .red : .black)
                     }
                 }
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
@@ -46,7 +51,9 @@ struct CalendarView: View {
                 }
             }
             .padding()
+            Text("\(calendars.index)")
             Spacer()
+ 
         }
     }
     
@@ -59,6 +66,7 @@ struct CalendarView: View {
 }
 
 struct CalendarView_Previews: PreviewProvider {
+    
     static var previews: some View {
         CalendarView()
     }
