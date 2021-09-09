@@ -32,11 +32,15 @@ final class Calendars: ObservableObject {
     }
 //현재 년도
     var currentYear: String {
-        return String(Calendar.current.component(.year, from: Date()))
+        let firstDate = calendar.date(from: components)
+        let nextDate = calendar.date(byAdding: .month, value: index, to: firstDate!)
+        return String(Calendar.current.component(.year, from: nextDate!))
     }
 //현재 월
     var currentMonth: String {
-        return String(Calendar.current.component(.month, from: Date()))
+        let firstDate = calendar.date(from: components)
+        let nextDate = calendar.date(byAdding: .month, value: index, to: firstDate!)
+        return String(Calendar.current.component(.month, from: nextDate!))
     }
 //달의 첫일
     var firstDayOfMonth: Int {

@@ -47,11 +47,12 @@ struct CalendarView: View {
                     ForEach(startIndex..<endIndex + dayIndex, id: \.self) { i in
                         self.addCount(i: i).dateFieldCell(overTime: 2, color: ((i % 7) != 0) ? .green : .blue)
                             .opacity(i < dayIndex ? 0.0 : 1.0)
+                            
                     }
-                }
+                    
+                }.animation(.easeInOut)
             }
             .padding()
-            Text("\(calendars.index)")
             Spacer()
  
         }
