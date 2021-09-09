@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct CalendarView: View {
-    
-    @StateObject var calendars = Calendars()
-    //var calendars: Calendars = Calendars()
 
+    @EnvironmentObject var calendars: Calendars
+    
     var dayIndex: Int {
         calendars.valuesComponent.weekday!
     }
@@ -22,16 +21,22 @@ struct CalendarView: View {
         calendars.secondComponent.day!
     }
     
+    @State private var showDetail = false
+    
     var body: some View {
         VStack {
             HStack {
                 Button("<") {
-                    calendars.sub()
+                    withAnimation {
+                        calendars.sub()
+                    } 
                 }
                 Text("\(calendars.currentYear).\(calendars.currentMonth)")
                     .padding(.horizontal)
                 Button(">") {
-                    calendars.add()
+                    withAnimation {
+                        calendars.add()
+                    }
                 }
             }
             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -40,17 +45,16 @@ struct CalendarView: View {
             VStack{
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
                     ForEach(0..<calendars.weekArray.count, id: \.self) { i in
-                        Text(calendars.weekArray[i]).headerFieldCell(color: i == 0 ? .red : .black)
+                        Text(calendars.weekArray[i]).headerFieldCell(index: i)
                     }
                 }
+                
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
                     ForEach(startIndex..<endIndex + dayIndex, id: \.self) { i in
-                        self.addCount(i: i).dateFieldCell(overTime: 2, color: ((i % 7) != 0) ? .green : .blue)
+                        self.addCount(i: i).dateFieldCell(overTime: 2, index: i)
                             .opacity(i < dayIndex ? 0.0 : 1.0)
-                            
                     }
-                    
-                }.animation(.easeInOut)
+                }
             }
             .padding()
             Spacer()
@@ -67,8 +71,9 @@ struct CalendarView: View {
 }
 
 struct CalendarView_Previews: PreviewProvider {
-    
+    @StateObject static var calendars = Calendars()
     static var previews: some View {
         CalendarView()
+            .environmentObject(calendars)
     }
 }

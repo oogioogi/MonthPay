@@ -34,7 +34,7 @@ struct CategoryHome: View {
                     }
                 })
                 .pickerStyle(SegmentedPickerStyle())
-
+                
                 HStack {
                     ForEach(0..<workDays.data[selectedItems].source.count, id: \.self) { i in
                         BarView(

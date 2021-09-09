@@ -11,18 +11,22 @@ struct HeaderFieldCell: ViewModifier {
 
     var width: CGFloat = UIScreen.main.bounds.width / 8
     var fontSize: CGFloat {
-        self.width * 0.5
+        self.width * 0.4
     }
-    var color: Color
+    //var color: Color
+    var index: Int
+    var colorSelector: (Int) -> Color
     
     func body(content: Content) -> some View {
         ZStack(alignment: .center) {
-            Rectangle()
-                .stroke(lineWidth: 1.0)
-                .frame(width: self.width, height: self.width * 1.5)
+            Circle()
+                //.stroke(lineWidth: 1.0)
+                .fill().foregroundColor(.blue).opacity(0.5)
+                .cornerRadius(10)
+                .frame(width: self.width, height: self.width)
             content
                 .font(.system(size: fontSize))
-                .foregroundColor(color)
+                .foregroundColor(colorSelector(index))
         }
 
     }
@@ -30,8 +34,15 @@ struct HeaderFieldCell: ViewModifier {
 }
 
 extension View {
-    func headerFieldCell(color: Color) -> some View {
-        modifier(HeaderFieldCell(color:color))
+    func headerFieldCell(index: Int) -> some View {
+        modifier(HeaderFieldCell(index: index, colorSelector: { _ in
+            if index == 0 {
+                return Color.red
+            } else if index == 6 {
+                return Color.blue
+            }
+            return Color.black
+        }))
     }
 }
 

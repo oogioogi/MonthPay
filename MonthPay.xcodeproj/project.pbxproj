@@ -17,7 +17,6 @@
 		862E6E7F26CB337100B94922 /* ContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862E6E7E26CB337100B94922 /* ContentData.swift */; };
 		8630E9E626C7D8E700D239AF /* RowsInOneYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8630E9E526C7D8E700D239AF /* RowsInOneYear.swift */; };
 		8633AD7726E4C272001D5E56 /* HeaderFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633AD7626E4C272001D5E56 /* HeaderFieldCell.swift */; };
-		8633FBB226E9D6AC0024E354 /* CalendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8633FBB126E9D6AC0024E354 /* CalendarData.swift */; };
 		86355EF726E2EECD00720DDF /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86355EF626E2EECD00720DDF /* PieView.swift */; };
 		8635D57626CB83C600B655AF /* MonthIconBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635D57526CB83C600B655AF /* MonthIconBadge.swift */; };
 		8635D57E26CBB9BC00B655AF /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635D57D26CBB9BC00B655AF /* CategoryHome.swift */; };
@@ -49,7 +48,6 @@
 		862E6E7E26CB337100B94922 /* ContentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentData.swift; sourceTree = "<group>"; };
 		8630E9E526C7D8E700D239AF /* RowsInOneYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsInOneYear.swift; sourceTree = "<group>"; };
 		8633AD7626E4C272001D5E56 /* HeaderFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFieldCell.swift; sourceTree = "<group>"; };
-		8633FBB126E9D6AC0024E354 /* CalendarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarData.swift; sourceTree = "<group>"; };
 		86355EF626E2EECD00720DDF /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
 		8635D57526CB83C600B655AF /* MonthIconBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthIconBadge.swift; sourceTree = "<group>"; };
 		8635D57D26CBB9BC00B655AF /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				8633AD7626E4C272001D5E56 /* HeaderFieldCell.swift */,
 				8646632826E3BF8400DC1ACD /* CalendarView.swift */,
 				86166AFD26EA0F8200BB193C /* Calendars.swift */,
-				8633FBB126E9D6AC0024E354 /* CalendarData.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -282,7 +279,6 @@
 			files = (
 				86166AFE26EA0F8200BB193C /* Calendars.swift in Sources */,
 				8635D57E26CBB9BC00B655AF /* CategoryHome.swift in Sources */,
-				8633FBB226E9D6AC0024E354 /* CalendarData.swift in Sources */,
 				8635D57626CB83C600B655AF /* MonthIconBadge.swift in Sources */,
 				862D8CD026C9411200AC6774 /* BasicDuty.swift in Sources */,
 				8630E9E626C7D8E700D239AF /* RowsInOneYear.swift in Sources */,

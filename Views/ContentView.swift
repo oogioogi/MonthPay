@@ -14,6 +14,7 @@ struct ContentView: View {
     enum Tap {
         case list
         case feature
+        case calendar
     }
     
     var body: some View {
@@ -28,6 +29,9 @@ struct ContentView: View {
                 .tabItem { Label("Feature List", systemImage: "text.book.closed")}
                 .tag(Tap.feature)
             
+            CalendarView()
+                .tabItem { Label("Calendar ", systemImage: "calendar")}
+                .tag(Tap.calendar)
                 
         }
         
@@ -40,5 +44,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .environmentObject(ModelData())
             .environmentObject(WorkDays())
+            .environmentObject(Calendars())
     }
 }
