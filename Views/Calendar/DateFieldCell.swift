@@ -18,6 +18,7 @@ struct DateFieldCell: ViewModifier {
     @State var isOnTap: Bool = false
     
     func body(content: Content) -> some View {
+  
         ZStack(alignment: .top) {
             Rectangle()
                 .stroke(lineWidth: 1.0)
