@@ -20,9 +20,8 @@ struct HeaderFieldCell: ViewModifier {
     func body(content: Content) -> some View {
         ZStack(alignment: .center) {
             Circle()
-                //.stroke(lineWidth: 1.0)
                 .fill().foregroundColor(.blue).opacity(0.5)
-                .cornerRadius(10)
+                .shadow(color: .blue, radius: 5, x: 5, y: 5)
                 .frame(width: self.width, height: self.width)
             content
                 .font(.system(size: fontSize))
@@ -46,3 +45,8 @@ extension View {
     }
 }
 
+struct HeaderFieldCell_Previews: PreviewProvider {
+    static var previews: some View {
+        Text("Sun").headerFieldCell(index: 0)
+    }
+}

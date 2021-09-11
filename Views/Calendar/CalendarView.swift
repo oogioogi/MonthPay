@@ -22,6 +22,9 @@ struct CalendarView: View {
     }
     
     @State private var showDetail = false
+    @State var isOnTap: Bool = false
+    
+    var overTime: [Int] = [ 1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10]
     
     var body: some View {
         VStack {
@@ -51,14 +54,22 @@ struct CalendarView: View {
                 
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
                     ForEach(startIndex..<endIndex + dayIndex, id: \.self) { i in
-                        self.addCount(i: i).dateFieldCell(overTime: 2, index: i)
-                            .opacity(i < dayIndex ? 0.0 : 1.0)
+                        self.addCount(i: i).dateFieldCell(isOnTap: $isOnTap, overTime: overTime[i], index: i)
+                            .opacity(i < dayIndex ? 0.5 : 1.0)
                     }
                 }
             }
             .padding()
+            if isOnTap {
+                List {
+                    Text("근무 형태").listFieldCell(overTime: 8)
+                    Text("연장 근무").listFieldCell(overTime: 8)
+                    Text("휴가").listFieldCell(overTime: 8)
+                }
+            }
+            
             Spacer()
- 
+            
         }
     }
     
@@ -72,8 +83,20 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     @StateObject static var calendars = Calendars()
+    @Binding var isOnTap: Bool
     static var previews: some View {
         CalendarView()
             .environmentObject(calendars)
     }
 }
+
+
+/*
+ case normalWork = 0  // 정상근무
+ case holydayVacation // 휴일 휴가
+ case shiftDays       // 교대 일수
+ case overTime        // 연장
+ case nightDuty       // 야간
+ case holyDayDuty     // 휴일
+ case closedDayDuty   // 휴무
+ */

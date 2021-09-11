@@ -9,7 +9,7 @@ import Foundation
 
 final class Calendars: ObservableObject {
     
-    var index: Int = 0
+    @Published var index: Int = 0
 
 //    init(index: Int) {
 //        self.index = index
@@ -79,10 +79,10 @@ final class Calendars: ObservableObject {
 
     func add() {
         self.index += 1
-        objectWillChange.send()
+        //objectWillChange.send()
     }
     func sub() {
         self.index -= 1
-        objectWillChange.send()
+        //objectWillChange.send()
     }
 }
