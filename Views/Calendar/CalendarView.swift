@@ -10,7 +10,9 @@ import SwiftUI
 struct CalendarView: View {
 
     @EnvironmentObject var calendars: Calendars
-    
+    @EnvironmentObject var sourceDatas: SourceDatas
+    @State private var showDetail = false
+    @State var isOnTap: Bool = false
     var dayIndex: Int {
         calendars.valuesComponent.weekday!
     }
@@ -20,11 +22,11 @@ struct CalendarView: View {
     var endIndex: Int {
         calendars.secondComponent.day!
     }
-    
-    @State private var showDetail = false
-    @State var isOnTap: Bool = false
-    
     var overTime: [Int] = [ 1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10]
+
+    var overtime: Double {
+        sourceDatas.datas[0].days[0].work[0].data
+    }
     
     var body: some View {
         VStack {

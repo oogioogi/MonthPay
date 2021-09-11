@@ -40,216 +40,217 @@ enum WorkType {
 
 final class SourceDatas: ObservableObject {
     
-    var datas: [(month: Months, days: [(day: Int, work: [(WorkType, Double)])])] =
+    var datas: [(month: Monthly, days: [(day: Int, work: (type: WorkType, data: Double))])] =
         [
             (
-                Months.Jan,
+                Monthly.Jan,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
                 
             ),
             (
-                Months.Feb,
+                Monthly.Feb,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
                 
             ),
             (
-                Months.Mar,
+                Monthly.Mar,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
                 
             ),
             (
-                Months.Apr,
+                Monthly.Apr,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
                 
             ),
             (
-                Months.May,
+                Monthly.May,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
             ),
             (
-                Months.Jun,
+                Monthly.Jun,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
                 
             ),
             (
-                Months.Jul,
+                Monthly.Jul,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
             ),
             (
-                Months.Aug,
+                Monthly.Aug,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
             ),
             (
-                Months.Sep,
+                Monthly.Sep,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
             ),
             (
-                Months.Oct,
+                Monthly.Oct,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
             ),
             (
-                Months.Nov,
+                Monthly.Nov,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
                 ]
             ),
             (
-                Months.Dec,
+                Monthly.Dec,
                 [
-                    (1,[(WorkType.normalWork, 8.0)]), (2,[(WorkType.normalWork, 8.0)]), (3,[(WorkType.normalWork, 8.0)]),
-                    (4,[(WorkType.normalWork, 8.0)]), (5,[(WorkType.normalWork, 8.0)]), (6,[(WorkType.normalWork, 8.0)]),
-                    (7,[(WorkType.normalWork, 8.0)]), (8,[(WorkType.normalWork, 8.0)]), (9,[(WorkType.normalWork, 8.0)]),
-                    (10,[(WorkType.normalWork, 8.0)]),
-                    (11,[(WorkType.normalWork, 8.0)]), (12,[(WorkType.normalWork, 8.0)]), (13,[(WorkType.normalWork, 8.0)]),
-                    (14,[(WorkType.normalWork, 8.0)]), (15,[(WorkType.normalWork, 8.0)]), (16,[(WorkType.normalWork, 8.0)]),
-                    (17,[(WorkType.normalWork, 8.0)]), (18,[(WorkType.normalWork, 8.0)]), (19,[(WorkType.normalWork, 8.0)]),
-                    (20,[(WorkType.normalWork, 8.0)]),
-                    (21,[(WorkType.normalWork, 8.0)]), (22,[(WorkType.normalWork, 8.0)]), (23,[(WorkType.normalWork, 8.0)]),
-                    (24,[(WorkType.normalWork, 8.0)]), (25,[(WorkType.normalWork, 8.0)]), (26,[(WorkType.normalWork, 8.0)]),
-                    (27,[(WorkType.normalWork, 8.0)]), (28,[(WorkType.normalWork, 8.0)]), (29,[(WorkType.normalWork, 8.0)]),
-                    (30,[(WorkType.normalWork, 8.0)]), (31,[(WorkType.normalWork, 8.0)])
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 18.0))
                 ]
             ),
         ]
 }
+

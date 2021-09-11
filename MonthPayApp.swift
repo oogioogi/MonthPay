@@ -12,6 +12,7 @@ struct MonthPayApp: App {
     @StateObject var modelData = ModelData()
     @StateObject var workDays = WorkDays()
     @StateObject var calendars = Calendars()
+    @StateObject var sourceDatas = SourceDatas()
     //@Environment(\.calendar) var calendar
     var body: some Scene {
         WindowGroup {
@@ -19,6 +20,7 @@ struct MonthPayApp: App {
                 .environmentObject(modelData)
                 .environmentObject(workDays)
                 .environmentObject(calendars)
+                .environmentObject(sourceDatas)
         }
     }
 }
