@@ -40,10 +40,10 @@ enum WorkType {
 
 final class SourceDatas: ObservableObject {
     
-    var datas: [(month: Monthly, days: [(day: Int, work: (type: WorkType, data: Double))])] =
+    var datas: [(month: Months, days: [(day: Int, work: (type: WorkType, data: Double))])] =
         [
             (
-                Monthly.Jan,
+                Months.Jan,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -61,7 +61,7 @@ final class SourceDatas: ObservableObject {
                 
             ),
             (
-                Monthly.Feb,
+                Months.Feb,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -79,7 +79,7 @@ final class SourceDatas: ObservableObject {
                 
             ),
             (
-                Monthly.Mar,
+                Months.Mar,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -97,7 +97,7 @@ final class SourceDatas: ObservableObject {
                 
             ),
             (
-                Monthly.Apr,
+                Months.Apr,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -115,7 +115,7 @@ final class SourceDatas: ObservableObject {
                 
             ),
             (
-                Monthly.May,
+                Months.May,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -132,7 +132,7 @@ final class SourceDatas: ObservableObject {
                 ]
             ),
             (
-                Monthly.Jun,
+                Months.Jun,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -150,7 +150,7 @@ final class SourceDatas: ObservableObject {
                 
             ),
             (
-                Monthly.Jul,
+                Months.Jul,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -167,7 +167,7 @@ final class SourceDatas: ObservableObject {
                 ]
             ),
             (
-                Monthly.Aug,
+                Months.Aug,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -184,7 +184,7 @@ final class SourceDatas: ObservableObject {
                 ]
             ),
             (
-                Monthly.Sep,
+                Months.Sep,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -201,7 +201,7 @@ final class SourceDatas: ObservableObject {
                 ]
             ),
             (
-                Monthly.Oct,
+                Months.Oct,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -218,7 +218,7 @@ final class SourceDatas: ObservableObject {
                 ]
             ),
             (
-                Monthly.Nov,
+                Months.Nov,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -235,7 +235,7 @@ final class SourceDatas: ObservableObject {
                 ]
             ),
             (
-                Monthly.Dec,
+                Months.Dec,
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),

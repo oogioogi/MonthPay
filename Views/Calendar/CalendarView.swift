@@ -22,11 +22,6 @@ struct CalendarView: View {
     var endIndex: Int {
         calendars.secondComponent.day!
     }
-    var overTime: [Int] = [ 1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10]
-
-    var overtime: Double {
-        sourceDatas.datas[0].days[0].work[0].data
-    }
     
     var body: some View {
         VStack {
@@ -56,7 +51,7 @@ struct CalendarView: View {
                 
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
                     ForEach(startIndex..<endIndex + dayIndex, id: \.self) { i in
-                        self.addCount(i: i).dateFieldCell(isOnTap: $isOnTap, overTime: overTime[i], index: i)
+                        self.addCount(i: i).dateFieldCell(isOnTap: $isOnTap, overTime: Int(sourceDatas.datas[0].days[0].work.data), index: i)
                             .opacity(i < dayIndex ? 0.5 : 1.0)
                     }
                 }
@@ -85,10 +80,12 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     @StateObject static var calendars = Calendars()
+    @StateObject static var sourceDatas = SourceDatas()
     @Binding var isOnTap: Bool
     static var previews: some View {
         CalendarView()
             .environmentObject(calendars)
+            .environmentObject(sourceDatas)
     }
 }
 
