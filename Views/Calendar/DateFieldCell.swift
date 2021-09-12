@@ -17,7 +17,7 @@ struct DateFieldCell: ViewModifier {
     var fontSize: CGFloat {
         self.width * 0.5
     }
-    var overTime: Int
+    var overTime: Double
     var index: Int
     var colorSelector: (Int) -> Color
 
@@ -36,10 +36,9 @@ struct DateFieldCell: ViewModifier {
                 .font(.system(size: fontSize))
                 .foregroundColor(colorSelector(index))
             
-            Text(overTime <= 0 ? "" : "\(overTime)")
+            Text(overTime <= 0 ? "" : "\(overTime, specifier: "%.1f")")
                 .offset(x: 15, y: -20)
                 .foregroundColor(Color.pink)
-                
         }
         .onTapGesture {
             withAnimation {
@@ -54,7 +53,7 @@ struct DateFieldCell: ViewModifier {
 }
 
 extension View {
-    func dateFieldCell(isOnTap: Binding<Bool>, overTime: Int, index: Int) -> some View {
+    func dateFieldCell(isOnTap: Binding<Bool>, overTime: Double, index: Int) -> some View {
         modifier(DateFieldCell( isOnTap: isOnTap, overTime: overTime, index: index, colorSelector: { _ in
             if ((index % 7) == 0) {
                 return Color.blue
@@ -69,6 +68,6 @@ extension View {
 struct DateFieldCell_Previews: PreviewProvider {
     @State static var isOnTap: Bool = false
     static var previews: some View {
-        Text("10").dateFieldCell(isOnTap: $isOnTap, overTime: 3, index: 1)
+        Text("10").dateFieldCell(isOnTap: $isOnTap, overTime: 9.0, index: 1)
     }
 }

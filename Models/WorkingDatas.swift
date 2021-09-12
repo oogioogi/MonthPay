@@ -43,7 +43,7 @@ final class SourceDatas: ObservableObject {
     var datas: [(month: Months, days: [(day: Int, work: (type: WorkType, data: Double))])] =
         [
             (
-                Months.Jan,
+                Months.Jan, //1
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -61,7 +61,24 @@ final class SourceDatas: ObservableObject {
                 
             ),
             (
-                Months.Feb,
+                Months.Feb, //2
+                [
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0))
+                ]
+                
+            ),
+            (
+                Months.Mar, //3
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -79,7 +96,7 @@ final class SourceDatas: ObservableObject {
                 
             ),
             (
-                Months.Mar,
+                Months.Apr, //4
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -92,12 +109,12 @@ final class SourceDatas: ObservableObject {
                     (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
                     (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
                     (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
-                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
+                    (30,(WorkType.normalWork, 8.0))
                 ]
                 
             ),
             (
-                Months.Apr,
+                Months.May, //5
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -111,11 +128,28 @@ final class SourceDatas: ObservableObject {
                     (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
                     (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
                     (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
+                ]
+            ),
+            (
+                Months.Jun, //6
+                [
+                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 8.0))
                 ]
                 
             ),
             (
-                Months.May,
+                Months.Jul, //7
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -132,25 +166,7 @@ final class SourceDatas: ObservableObject {
                 ]
             ),
             (
-                Months.Jun,
-                [
-                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
-                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
-                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
-                    (10,(WorkType.normalWork, 8.0)),
-                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
-                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
-                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
-                    (20,(WorkType.normalWork, 8.0)),
-                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
-                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
-                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
-                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
-                ]
-                
-            ),
-            (
-                Months.Jul,
+                Months.Aug, //8
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -167,7 +183,24 @@ final class SourceDatas: ObservableObject {
                 ]
             ),
             (
-                Months.Aug,
+                Months.Sep, //9
+                [
+                    (1,(WorkType.normalWork, 9.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 9.0)),
+                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
+                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
+                    (10,(WorkType.normalWork, 8.0)),
+                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
+                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
+                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
+                    (20,(WorkType.normalWork, 8.0)),
+                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
+                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
+                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
+                    (30,(WorkType.normalWork, 9.0))
+                ]
+            ),
+            (
+                Months.Oct, //10
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -184,7 +217,7 @@ final class SourceDatas: ObservableObject {
                 ]
             ),
             (
-                Months.Sep,
+                Months.Nov, //11
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
@@ -197,45 +230,11 @@ final class SourceDatas: ObservableObject {
                     (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
                     (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
                     (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
-                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
+                    (30,(WorkType.normalWork, 8.0))
                 ]
             ),
             (
-                Months.Oct,
-                [
-                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
-                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
-                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
-                    (10,(WorkType.normalWork, 8.0)),
-                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
-                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
-                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
-                    (20,(WorkType.normalWork, 8.0)),
-                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
-                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
-                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
-                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
-                ]
-            ),
-            (
-                Months.Nov,
-                [
-                    (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
-                    (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
-                    (7,(WorkType.normalWork, 8.0)), (8,(WorkType.normalWork, 8.0)), (9,(WorkType.normalWork, 8.0)),
-                    (10,(WorkType.normalWork, 8.0)),
-                    (11,(WorkType.normalWork, 8.0)), (12,(WorkType.normalWork, 8.0)), (13,(WorkType.normalWork, 8.0)),
-                    (14,(WorkType.normalWork, 8.0)), (15,(WorkType.normalWork, 8.0)), (16,(WorkType.normalWork, 8.0)),
-                    (17,(WorkType.normalWork, 8.0)), (18,(WorkType.normalWork, 8.0)), (19,(WorkType.normalWork, 8.0)),
-                    (20,(WorkType.normalWork, 8.0)),
-                    (21,(WorkType.normalWork, 8.0)), (22,(WorkType.normalWork, 8.0)), (23,(WorkType.normalWork, 8.0)),
-                    (24,(WorkType.normalWork, 8.0)), (25,(WorkType.normalWork, 8.0)), (26,(WorkType.normalWork, 8.0)),
-                    (27,(WorkType.normalWork, 8.0)), (28,(WorkType.normalWork, 8.0)), (29,(WorkType.normalWork, 8.0)),
-                    (30,(WorkType.normalWork, 8.0)), (31,(WorkType.normalWork, 8.0))
-                ]
-            ),
-            (
-                Months.Dec,
+                Months.Dec, //12
                 [
                     (1,(WorkType.normalWork, 10.0)), (2,(WorkType.normalWork, 10.0)), (3,(WorkType.normalWork, 8.0)),
                     (4,(WorkType.normalWork, 8.0)), (5,(WorkType.normalWork, 8.0)), (6,(WorkType.normalWork, 8.0)),
